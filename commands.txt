@@ -1,0 +1,5 @@
+/exit
+/computername
+/username
+/lang
+/node
