@@ -9,16 +9,16 @@ process.stdin.on('readable', () => {
                 process.exit();
                 break;
             case '/computername':
-                process.stdout.write(process.env.COMPUTERNAME);
+                process.stdout.write(process.env.COMPUTERNAME + '\n');
                 break;
             case '/username':
-                process.stdout.write(process.env.USERNAME);
+                process.stdout.write(process.env.USERNAME + '\n');
                 break;
             case '/lang':
-                process.stdout.write(process.env.LANG);
+                process.stdout.write(process.env.LANG + '\n');
                 break;
             case '/node':
-                process.stdout.write(process.versions.node);
+                process.stdout.write(process.versions.node + '\n');
                 break;
             default:
                 process.stderr.write('Wrong instruction!\n'); 
