@@ -12,7 +12,8 @@ process.stdin.on('readable', () => {
                 process.stdout.write(process.env.COMPUTERNAME + '\n');
                 break;
             case '/username':
-                process.stdout.write(process.env.USERNAME + '\n');
+                let name = process.env.USER || process.env.USERNAME;
+                process.stdout.write((name + '\n'));
                 break;
             case '/lang':
                 process.stdout.write(process.env.LANG + '\n');
